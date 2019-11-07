@@ -7,9 +7,11 @@ metadata:
   namespace: monitoring
 spec:
   ports:
+  type: NodePort
   - name: web
     port: 9090
     targetPort: web
+    nodePort: 30200
   selector:
     app: prometheus
     prometheus: k8s
