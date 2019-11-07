@@ -7,9 +7,11 @@ metadata:
   namespace: monitoring
 spec:
   ports:
+  type: NodePort
   - name: web
     port: 9093
     targetPort: web
+    nodePort: 30300
   selector:
     alertmanager: main
     app: alertmanager
